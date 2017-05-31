@@ -19,9 +19,10 @@ python manage.py runserver  # Run Babel
 source venv/bin/activate
 cd babel
 pybabel extract -F babel.cfg -o messages.pot application
+pybabel update -i messages.pot -d application/translations
 ```
 
-## Generating a language catalog
+## Generating a language catalog for the first time
 ```
 source venv/bin/activate
 cd babel
